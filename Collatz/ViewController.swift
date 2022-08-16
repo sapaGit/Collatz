@@ -9,9 +9,10 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet var resultLabel: UILabel!
+  
     @IBOutlet var numberLabel: UILabel!
     
+    var arrayOfValues: [Int] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -26,10 +27,12 @@ class ViewController: UIViewController {
         var resultText = ""
         guard var tempValue = Int(numberLabel.text ?? "Error") else { return }
         while tempValue != 1 {
+            arrayOfValues.append(tempValue)
             resultText += " \(tempValue)"
             checkValue(value: &tempValue)
         }
-        resultLabel.text = resultText + " 1"
+        arrayOfValues.append(1)
+        print(arrayOfValues)
     }
     func checkValue(value: inout Int) {
         if value % 2 == 0 {

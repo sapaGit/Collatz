@@ -44,15 +44,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="headTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xrg-O6-1ee">
-                                <rect key="frame" x="40" y="368.5" width="334" height="252"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="xrg-O6-1ee" secondAttribute="height" multiplier="240:181" id="GhK-jW-DF6"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ufS-xb-OHo">
                                 <rect key="frame" x="157" y="213" width="100" height="43"/>
                                 <color key="backgroundColor" red="0.78039215689999997" green="0.71071729510000003" blue="0.177901004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -85,12 +76,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xrg-O6-1ee" secondAttribute="trailing" constant="40" id="56k-A4-aJM"/>
                             <constraint firstItem="Yij-eb-SdG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="5jz-yl-sge"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Yij-eb-SdG" secondAttribute="trailing" constant="40" id="BV1-aL-dkj"/>
                             <constraint firstItem="GdJ-gA-RJR" firstAttribute="top" secondItem="gLb-56-FJ4" secondAttribute="bottom" constant="40" id="EhD-2k-x56"/>
                             <constraint firstItem="gLb-56-FJ4" firstAttribute="top" secondItem="Yij-eb-SdG" secondAttribute="bottom" constant="40" id="RWc-BB-CO3"/>
-                            <constraint firstItem="xrg-O6-1ee" firstAttribute="top" secondItem="GdJ-gA-RJR" secondAttribute="bottom" constant="40" id="Rux-Lw-Ab1"/>
                             <constraint firstItem="GdJ-gA-RJR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="T1t-je-9qk"/>
                             <constraint firstItem="ufS-xb-OHo" firstAttribute="top" secondItem="Yij-eb-SdG" secondAttribute="bottom" constant="40" id="V0g-gX-iaF"/>
                             <constraint firstItem="gLb-56-FJ4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YG2-lD-Qpn"/>
@@ -99,12 +88,10 @@
                             <constraint firstItem="GdJ-gA-RJR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h1o-ec-HFV"/>
                             <constraint firstItem="ufS-xb-OHo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hWK-eN-7dI"/>
                             <constraint firstItem="ah6-N4-CRp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jJl-iO-AyD"/>
-                            <constraint firstItem="xrg-O6-1ee" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="v97-Le-4vS"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="numberLabel" destination="GdJ-gA-RJR" id="oJ8-Kv-0Ui"/>
-                        <outlet property="resultLabel" destination="xrg-O6-1ee" id="su9-Tu-okw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -13,9 +13,12 @@
 		A055B6FC28AADECC0044CB24 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A055B6FA28AADECC0044CB24 /* Main.storyboard */; };
 		A055B6FE28AADECD0044CB24 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A055B6FD28AADECD0044CB24 /* Assets.xcassets */; };
 		A055B70128AADECD0044CB24 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A055B6FF28AADECD0044CB24 /* LaunchScreen.storyboard */; };
+		F018469A0C7B0585421B3E4C /* Pods_Collatz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF441D09B31DF905DAF10BF9 /* Pods_Collatz.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		096927743C3A2764778F338E /* Pods-Collatz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Collatz.debug.xcconfig"; path = "Target Support Files/Pods-Collatz/Pods-Collatz.debug.xcconfig"; sourceTree = "<group>"; };
+		8E518DCD88815E723DECCD5F /* Pods-Collatz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Collatz.release.xcconfig"; path = "Target Support Files/Pods-Collatz/Pods-Collatz.release.xcconfig"; sourceTree = "<group>"; };
 		A055B6F128AADECC0044CB24 /* Collatz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Collatz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A055B6F428AADECC0044CB24 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A055B6F628AADECC0044CB24 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		A055B6FD28AADECD0044CB24 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A055B70028AADECD0044CB24 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A055B70228AADECD0044CB24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF441D09B31DF905DAF10BF9 /* Pods_Collatz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Collatz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F018469A0C7B0585421B3E4C /* Pods_Collatz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3AC60D933E597B6CD1A3A80E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				096927743C3A2764778F338E /* Pods-Collatz.debug.xcconfig */,
+				8E518DCD88815E723DECCD5F /* Pods-Collatz.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9DF91993AF65D62628406C6E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EF441D09B31DF905DAF10BF9 /* Pods_Collatz.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A055B6E828AADECC0044CB24 = {
 			isa = PBXGroup;
 			children = (
 				A055B6F328AADECC0044CB24 /* Collatz */,
 				A055B6F228AADECC0044CB24 /* Products */,
+				3AC60D933E597B6CD1A3A80E /* Pods */,
+				9DF91993AF65D62628406C6E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A055B70528AADECD0044CB24 /* Build configuration list for PBXNativeTarget "Collatz" */;
 			buildPhases = (
+				8FB9C50D3519A84200BE3538 /* [CP] Check Pods Manifest.lock */,
 				A055B6ED28AADECC0044CB24 /* Sources */,
 				A055B6EE28AADECC0044CB24 /* Frameworks */,
 				A055B6EF28AADECC0044CB24 /* Resources */,
+				9EC92BA2BA8F49BD3C86838F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8FB9C50D3519A84200BE3538 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Collatz-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9EC92BA2BA8F49BD3C86838F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Collatz/Pods-Collatz-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Collatz/Pods-Collatz-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Collatz/Pods-Collatz-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A055B6ED28AADECC0044CB24 /* Sources */ = {
@@ -284,6 +353,7 @@
 		};
 		A055B70628AADECD0044CB24 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 096927743C3A2764778F338E /* Pods-Collatz.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -312,6 +382,7 @@
 		};
 		A055B70728AADECD0044CB24 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E518DCD88815E723DECCD5F /* Pods-Collatz.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
