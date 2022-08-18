@@ -33,7 +33,7 @@ class ViewController: UIViewController, ChartViewDelegate {
 
     @IBAction func sliderChosed(_ sender: UISlider) {
         sender.minimumValue = 2
-        sender.maximumValue = 100
+        sender.maximumValue = 200
         numberLabel.text = String(Int(sender.value))
     }
     @IBAction func submitTapped(_ sender: UIButton) {
@@ -42,7 +42,6 @@ class ViewController: UIViewController, ChartViewDelegate {
         guard var tempValue = Int(numberLabel.text ?? "Error") else { return }
         while tempValue != 1 {
             arrayOfValues.append(tempValue)
-        
             checkValue(value: &tempValue)
         }
         arrayOfValues.append(1)
@@ -50,9 +49,10 @@ class ViewController: UIViewController, ChartViewDelegate {
             entries.append(ChartDataEntry(x: Double(index), y: Double(arrayOfValues[index])))
         }
         let set = LineChartDataSet(entries: entries)
-        set.colors = ChartColorTemplates.material()
+        set.colors = ChartColorTemplates.colorful()
         let data =  LineChartData(dataSet: set)
         lineChart.data = data
+        lineChart.backgroundColor = .lightText
         print(arrayOfValues)
     }
     func checkValue(value: inout Int) {
