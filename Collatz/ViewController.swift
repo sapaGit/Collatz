@@ -55,6 +55,13 @@ class ViewController: UIViewController, ChartViewDelegate {
         lineChart.backgroundColor = .lightText
         print(arrayOfValues)
     }
+    @IBAction func showDiagrammTapped(_ sender: UIButton) {
+        guard let controller = self.storyboard?.instantiateViewController(withIdentifier: "SecondViewController") as? SecondViewController else { return }
+                controller.modalPresentationStyle = .fullScreen
+                controller.modalTransitionStyle = .flipHorizontal
+                self.present(controller, animated: true, completion: nil)
+            }
+    
     func checkValue(value: inout Int) {
         if value % 2 == 0 {
             value = value/2
@@ -63,4 +70,3 @@ class ViewController: UIViewController, ChartViewDelegate {
         }
     }
 }
-
