@@ -16,6 +16,7 @@ class ViewController: UIViewController, ChartViewDelegate {
     var lineChart = LineChartView()
     var arrayOfValues: [Int] = []
     var entries = [ChartDataEntry]()
+    var submitTappes = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,6 +40,7 @@ class ViewController: UIViewController, ChartViewDelegate {
     @IBAction func submitTapped(_ sender: UIButton) {
         arrayOfValues = []
         entries = []
+        submitTappes += 1
         guard var tempValue = Int(numberLabel.text ?? "Error") else { return }
         while tempValue != 1 {
             arrayOfValues.append(tempValue)
@@ -53,9 +55,9 @@ class ViewController: UIViewController, ChartViewDelegate {
         let data =  LineChartData(dataSet: set)
         lineChart.data = data
         lineChart.backgroundColor = .lightText
-        print(arrayOfValues)
     }
     @IBAction func showDiagrammTapped(_ sender: UIButton) {
+        if submitTappes < 1 { return }
         guard let controller = self.storyboard?.instantiateViewController(withIdentifier: "SecondViewController") as? SecondViewController else { return }
                 controller.modalPresentationStyle = .fullScreen
                 controller.modalTransitionStyle = .flipHorizontal
@@ -68,5 +70,15 @@ class ViewController: UIViewController, ChartViewDelegate {
         } else {
             value = value * 3 + 1
         }
+    }
+}
+
+extension ViewController {
+    func showAlert() {
+        let alert = UIAlertController(title: "Error", message: "Please tap submit", preferredStyle: .alert)
+
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+
+        self.present(alert, animated: true)
     }
 }
