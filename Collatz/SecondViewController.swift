@@ -11,25 +11,25 @@ class SecondViewController: UIViewController, ChartViewDelegate {
 
     @IBOutlet var myView: UIView!
     var tempArray: [Int] = []
-    var lineChart = LineChartView()
-    var entries = [ChartDataEntry]()
+    var barChart = BarChartView()
+    var entries = [BarChartDataEntry]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        lineChart.delegate = self
+        barChart.delegate = self
     }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        lineChart.frame = myView.frame
-        view.addSubview(lineChart)
+        barChart.frame = myView.frame
+        view.addSubview(barChart)
         for index in 0..<tempArray.count {
-            entries.append(ChartDataEntry(x: Double(index), y: Double(tempArray[index])))
+            entries.append(BarChartDataEntry(x: Double(index), y: Double(tempArray[index])))
         }
-        let set = LineChartDataSet(entries: entries)
-        set.colors = ChartColorTemplates.colorful()
-        let data =  LineChartData(dataSet: set)
-        lineChart.data = data
-        lineChart.backgroundColor = .lightText
+        let set = BarChartDataSet(entries: entries)
+        set.colors = ChartColorTemplates.material()
+        let data =  BarChartData(dataSet: set)
+        barChart.data = data
+        barChart.backgroundColor = .lightText
     }
     @IBAction func backTapped(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
