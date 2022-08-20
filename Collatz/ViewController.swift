@@ -57,11 +57,15 @@ class ViewController: UIViewController, ChartViewDelegate {
         lineChart.backgroundColor = .lightText
     }
     @IBAction func showDiagrammTapped(_ sender: UIButton) {
-        if submitTappes < 1 { return }
+        if submitTappes < 1 {
+            showAlert()
+            return
+        }
         guard let controller = self.storyboard?.instantiateViewController(withIdentifier: "SecondViewController") as? SecondViewController else { return }
                 controller.modalPresentationStyle = .fullScreen
                 controller.modalTransitionStyle = .flipHorizontal
                 self.present(controller, animated: true, completion: nil)
+                controller.tempArray = self.arrayOfValues
             }
     
     func checkValue(value: inout Int) {
