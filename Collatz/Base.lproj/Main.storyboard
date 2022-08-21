@@ -45,7 +45,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ufS-xb-OHo">
-                                <rect key="frame" x="95.5" y="169" width="129.5" height="43"/>
+                                <rect key="frame" x="110" y="169" width="100" height="43"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="4Hg-3Z-fS1"/>
@@ -82,16 +82,35 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jxT-5H-JxE">
-                                <rect key="frame" x="95.5" y="526" width="129.5" height="31"/>
-                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Show Diagramm"/>
-                                <connections>
-                                    <action selector="showDiagrammTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z9N-kD-gWp"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="34" translatesAutoresizingMaskIntoConstraints="NO" id="7p3-4U-j0g">
+                                <rect key="frame" x="20" y="523.5" width="280" height="25"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jxT-5H-JxE">
+                                        <rect key="frame" x="0.0" y="0.0" width="123" height="25"/>
+                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Show Bar Charts">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="9"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="showBarChartTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="if8-ea-wRl"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YWD-er-Idy">
+                                        <rect key="frame" x="157" y="0.0" width="123" height="25"/>
+                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Show Diagramm">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="9"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="showDiagrammTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ghz-J5-QsT"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
@@ -99,21 +118,21 @@
                             <constraint firstItem="Yij-eb-SdG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="5jz-yl-sge"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zZV-qn-oi9" secondAttribute="trailing" constant="20" id="9Hw-2B-o3P"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Yij-eb-SdG" secondAttribute="trailing" constant="40" id="BV1-aL-dkj"/>
-                            <constraint firstItem="jxT-5H-JxE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DZd-1B-EOi"/>
                             <constraint firstItem="GdJ-gA-RJR" firstAttribute="top" secondItem="gLb-56-FJ4" secondAttribute="bottom" constant="40" id="EhD-2k-x56"/>
-                            <constraint firstItem="jxT-5H-JxE" firstAttribute="width" secondItem="ufS-xb-OHo" secondAttribute="width" id="M4N-dr-TXf"/>
+                            <constraint firstItem="7p3-4U-j0g" firstAttribute="top" secondItem="zZV-qn-oi9" secondAttribute="bottom" constant="7" id="Kxq-xI-NKk"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zZV-qn-oi9" secondAttribute="bottom" multiplier="1.1" id="Nbx-Ol-14N"/>
                             <constraint firstItem="gLb-56-FJ4" firstAttribute="top" secondItem="Yij-eb-SdG" secondAttribute="bottom" constant="40" id="RWc-BB-CO3"/>
                             <constraint firstItem="GdJ-gA-RJR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="T1t-je-9qk"/>
                             <constraint firstItem="ufS-xb-OHo" firstAttribute="top" secondItem="Yij-eb-SdG" secondAttribute="bottom" constant="40" id="V0g-gX-iaF"/>
                             <constraint firstItem="gLb-56-FJ4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YG2-lD-Qpn"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jxT-5H-JxE" secondAttribute="bottom" multiplier="1.02" id="Zqt-3f-oMi"/>
                             <constraint firstItem="zZV-qn-oi9" firstAttribute="top" secondItem="GdJ-gA-RJR" secondAttribute="bottom" constant="40" id="bTk-1l-932"/>
                             <constraint firstItem="ah6-N4-CRp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="bmH-eh-xNa"/>
                             <constraint firstItem="Yij-eb-SdG" firstAttribute="top" secondItem="ah6-N4-CRp" secondAttribute="bottom" constant="20" id="c1k-fR-LvF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7p3-4U-j0g" secondAttribute="trailing" constant="20" id="c3x-Kf-Bzt"/>
                             <constraint firstItem="GdJ-gA-RJR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h1o-ec-HFV"/>
                             <constraint firstItem="ufS-xb-OHo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hWK-eN-7dI"/>
                             <constraint firstItem="ah6-N4-CRp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jJl-iO-AyD"/>
+                            <constraint firstItem="7p3-4U-j0g" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="teJ-xV-Iql"/>
                             <constraint firstItem="zZV-qn-oi9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="xMm-bb-5b5"/>
                         </constraints>
                     </view>
@@ -178,6 +197,60 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fpt-8z-KPl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="805" y="58"/>
+        </scene>
+        <!--Third View Controller-->
+        <scene sceneID="YKP-lR-72a">
+            <objects>
+                <viewController storyboardIdentifier="ThirdViewController" id="Xwa-Ur-tCY" customClass="ThirdViewController" customModule="Collatz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JNp-Y8-kdP">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yCG-ul-k05">
+                                <rect key="frame" x="20" y="128.5" width="280" height="311"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="tintColor" systemColor="systemGray2Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="yCG-ul-k05" secondAttribute="height" multiplier="374:415" id="2xn-2E-acm"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bq8-rV-OZr">
+                                <rect key="frame" x="20" y="20" width="56" height="31"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Back"/>
+                                <connections>
+                                    <action selector="backTapped:" destination="ggV-uV-haT" eventType="touchUpInside" id="qMQ-TA-K8v"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LNA-3X-UHz"/>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" systemColor="opaqueSeparatorColor"/>
+                        <constraints>
+                            <constraint firstItem="Bq8-rV-OZr" firstAttribute="leading" secondItem="LNA-3X-UHz" secondAttribute="leading" constant="20" id="8AV-F5-yMC"/>
+                            <constraint firstItem="LNA-3X-UHz" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Bq8-rV-OZr" secondAttribute="trailing" symbolic="YES" id="AVB-bs-7ex"/>
+                            <constraint firstItem="yCG-ul-k05" firstAttribute="centerY" secondItem="JNp-Y8-kdP" secondAttribute="centerY" id="Efe-gP-r0e"/>
+                            <constraint firstItem="Bq8-rV-OZr" firstAttribute="top" secondItem="LNA-3X-UHz" secondAttribute="top" constant="20" id="dev-fq-pIx"/>
+                            <constraint firstItem="yCG-ul-k05" firstAttribute="centerX" secondItem="LNA-3X-UHz" secondAttribute="centerX" id="j5R-iS-878"/>
+                            <constraint firstItem="LNA-3X-UHz" firstAttribute="trailing" secondItem="yCG-ul-k05" secondAttribute="trailing" constant="20" id="niL-W8-cBA"/>
+                            <constraint firstItem="yCG-ul-k05" firstAttribute="leading" secondItem="LNA-3X-UHz" secondAttribute="leading" constant="20" id="p3g-a8-qYM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="myView" destination="yCG-ul-k05" id="6ky-nJ-iYO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="92l-06-Nxz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="ggV-uV-haT" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1509" y="54"/>
         </scene>
     </scenes>
     <resources>

@@ -56,7 +56,7 @@ class ViewController: UIViewController, ChartViewDelegate {
         lineChart.data = data
         lineChart.backgroundColor = .lightText
     }
-    @IBAction func showDiagrammTapped(_ sender: UIButton) {
+    @IBAction func showBarChartTapped(_ sender: UIButton) {
         if submitTappes < 1 {
             showAlert()
             return
@@ -67,6 +67,17 @@ class ViewController: UIViewController, ChartViewDelegate {
                 self.present(controller, animated: true, completion: nil)
                 controller.tempArray = self.arrayOfValues
             }
+    @IBAction func showDiagrammTapped(_ sender: UIButton) {
+        if submitTappes < 1 {
+            showAlert()
+            return
+        }
+        guard let controller = self.storyboard?.instantiateViewController(withIdentifier: "ThirdViewController") as? ThirdViewController else { return }
+                controller.modalPresentationStyle = .fullScreen
+                controller.modalTransitionStyle = .flipHorizontal
+                self.present(controller, animated: true, completion: nil)
+                controller.tempArray = self.arrayOfValues
+    }
     
     func checkValue(value: inout Int) {
         if value % 2 == 0 {
