@@ -12,6 +12,7 @@ class ViewController: UIViewController, ChartViewDelegate {
   
     @IBOutlet var numberLabel: UILabel!
     @IBOutlet var viewForGraph: UIView!
+    @IBOutlet var slider: UISlider!
     
     var lineChart = LineChartView()
     var arrayOfValues: [Int] = []
@@ -20,6 +21,7 @@ class ViewController: UIViewController, ChartViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupSlider()
         lineChart.delegate = self
         // Do any additional setup after loading the view.
     }
@@ -33,8 +35,6 @@ class ViewController: UIViewController, ChartViewDelegate {
     }
 
     @IBAction func sliderChosed(_ sender: UISlider) {
-        sender.minimumValue = 2
-        sender.maximumValue = 200
         numberLabel.text = String(Int(sender.value))
     }
     @IBAction func submitTapped(_ sender: UIButton) {
@@ -79,6 +79,12 @@ class ViewController: UIViewController, ChartViewDelegate {
                 controller.tempArray = self.arrayOfValues
     }
     
+    func setupSlider() {
+        slider.minimumValue = 2
+        slider.maximumValue = 200
+        slider.value = 100
+    }
+    
     func checkValue(value: inout Int) {
         if value % 2 == 0 {
             value = value/2
@@ -86,6 +92,7 @@ class ViewController: UIViewController, ChartViewDelegate {
             value = value * 3 + 1
         }
     }
+    
 }
 
 extension ViewController {

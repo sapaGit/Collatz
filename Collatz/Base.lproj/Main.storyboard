@@ -138,6 +138,7 @@
                     </view>
                     <connections>
                         <outlet property="numberLabel" destination="GdJ-gA-RJR" id="oJ8-Kv-0Ui"/>
+                        <outlet property="slider" destination="Yij-eb-SdG" id="uPR-LV-iBi"/>
                         <outlet property="viewForGraph" destination="zZV-qn-oi9" id="K3m-fi-Ypn"/>
                     </connections>
                 </viewController>
